@@ -1,7 +1,9 @@
+PASSWORD_LENGTH = 10
+
+
 def main():
     """Get and print password using a funtion."""
-    password_length = 10
-    password = get_password(password_length)
+    password = get_password(PASSWORD_LENGTH)
     print(len(password) * '*')
 
 
