@@ -4,6 +4,7 @@ CP1404 - Practical program to determine score status
 
 import random
 
+
 def main():
     """Get user's score and print result."""
     score = float(input("Score: "))
