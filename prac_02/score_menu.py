@@ -9,7 +9,7 @@ menu_string = """(G)et a valid score
 
 
 def main():
-    """Get score,then print the status, stars or farewell"""
+    """Get score,then print the status, stars or farewell."""
     score = get_score()
     print(menu_string)
     choice = input("> ").upper()
@@ -28,12 +28,12 @@ def main():
 
 
 def print_stars(score):
-    """Print as many stars as the score"""
+    """Print as many stars as the score."""
     print(score * '*')
 
 
 def determine_status(score):
-    """Determine the result status"""
+    """Determine the result status."""
     if score < 0 or score > 100:
         return "Invalid score"
     elif score >= 90:
@@ -45,7 +45,7 @@ def determine_status(score):
 
 
 def get_score():
-    """Get score"""
+    """Get score."""
     score = int(input("Score: "))
     while score > 100 or score < 0:
         print("Invalid score")
