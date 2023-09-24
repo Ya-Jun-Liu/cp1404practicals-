@@ -8,7 +8,7 @@ Q - Quit"""
 
 
 def main():
-    """Temperature conversion"""
+    """Get user input, perform temperature conversion."""
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
@@ -17,7 +17,7 @@ def main():
             fahrenheit = convert_celsius_to_fahrenheit(celsius)
             print(f"Result: {fahrenheit:.2f} F")
         elif choice == "F":
-            fahrenheit = float(input("fahrenheit: "))
+            fahrenheit = float(input("Fahrenheit: "))
             celsius = convert_fahrenheit_to_celsius(fahrenheit)
             print(f"Result: {celsius:.2f} C")
         else:
@@ -28,13 +28,15 @@ def main():
 
 
 def convert_fahrenheit_to_celsius(fahrenheit):
-    """Convert fahrenheits to celsius."""
-    return 5 / 9 * (fahrenheit - 32)
+    """Convert from Fahrenheit to Celsius."""
+    celsius = 5 / 9 * (fahrenheit - 32)
+    return celsius
 
 
 def convert_celsius_to_fahrenheit(celsius):
-    """Convert celsius to fahrenheits."""
-    return celsius * 9.0 / 5 + 32
+    """Convert from Celsius to Fahrenheit."""
+    fahrenheit = celsius * 9.0 / 5 + 32
+    return fahrenheit
 
 
 main()
