@@ -32,9 +32,21 @@ add them together
 print the result
 """
 
-in_file = open("numbers.txt", "r")
-total = 0
-number1 = int(in_file.readline())
-number2 = int(in_file.readline())
-in_file.close()
-print(number1 + number2)
+# in_file = open("numbers.txt", "r")
+# total = 0
+# number1 = int(in_file.readline())
+# number2 = int(in_file.readline())
+# in_file.close()
+# print(number1 + number2)
+
+"""
+Q4.
+print the total for all lines in numbers.txt
+"""
+
+with open("numbers.txt", "r") as in_file:
+    numbers = in_file.readlines()
+    total = 0
+    for line in numbers:
+        total += int(line)
+    print(total)
