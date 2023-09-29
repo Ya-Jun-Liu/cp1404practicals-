@@ -39,9 +39,9 @@ def is_valid_password(password):
         # TODO: count each kind of character (use str methods like isdigit)
         if char.isdigit():
             count_digit += 1
-        elif char.slower():
+        elif char.islower():
             count_lower += 1
-        elif char.isuppper():
+        elif char.isupper():
             count_upper += 1
         elif char is SPECIAL_CHARACTERS:
             count_special += 1
