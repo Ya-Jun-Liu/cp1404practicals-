@@ -21,11 +21,12 @@ print(random.uniform(2.5, 5.5))  # line 3
 
 # What did you see on line 3?
 # What was the smallest number you could have seen, what was the largest?
-# The smallest number is 2.536589126820833
-# The largest number is 5.458676414415265
+# The theoretical smallest number is 2.5; however, the closest printed value is 2.536589126820833
+# The theoretical largest number is 5.5;; however, the closest printed value is 5.458676414415265
 
 
 # Write code, not a comment, to produce a random number between 1 and 100 inclusive.
 import random
-random_number = (random.randint(1,100))
-print(random_number)
+# random_number = (random.randint(1,100))
+# print(random_number)
+print(random.randint(1,100))
