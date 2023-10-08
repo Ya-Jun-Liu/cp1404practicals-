@@ -32,8 +32,8 @@ def get_data():
 def display_data(data):
     """Display subject details."""
     for i in range(len(data)):
-        print(f"{data[i][0]} is taught by {data[i][1]} and has {data[i][2]} students")
-        # print("{:6} is taught by {:12} and has {:3} students".format(data[i][0], data[i][1], data[i][2]))
+        # print(f"{data[i][0]} is taught by {data[i][1]} and has {data[i][2]} students")
+        print("{:6} is taught by {:12} and has {:3} students".format(data[i][0], data[i][1], data[i][2]))
 
 
 main()
