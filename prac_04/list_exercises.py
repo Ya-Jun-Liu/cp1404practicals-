@@ -5,6 +5,8 @@ for i in range(5):
     list_of_numbers.append(numbers)
 print(
     f"Number:{list_of_numbers[0]}\nNumber:{list_of_numbers[1]}\nNumber:{list_of_numbers[2]}\nNumber:{list_of_numbers[3]}\nNumber:{list_of_numbers[4]}")
+# print(
+#    "Number:{:2}\nNumber:{:2}\nNumber:{:2}\nNumber:{:2}\nNumber:{:2}".format(*list_of_numbers))
 print(f"The first number is {list_of_numbers[0]}")
 print(f"The last number is {list_of_numbers[-1]}")
 print(f"The smallest number is {min(list_of_numbers)}")
