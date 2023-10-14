@@ -1,7 +1,7 @@
 """
 Word Occurrences
 Estimate: 40 minutes
-Actual:    minutes
+Actual:  120  minutes
 """
 user_sentence = input("Enter a sentence: ")  # string
 words = user_sentence.split(" ")  # split a string into a list of substrings
