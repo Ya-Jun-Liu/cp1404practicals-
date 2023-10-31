@@ -8,7 +8,7 @@ from prac_06.guitar import Guitar
 
 
 def main():
-    """Use and print input guitar details."""
+    """Store input guitar details and print it."""
     guitars = []  # empty list to store user input
 
     print("My guitars!")
@@ -20,8 +20,8 @@ def main():
         guitars.append(add_guitar)
         print(add_guitar, "added.")
         name = input("Name: ")
-    # guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
-    # guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.90))
+    guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
+    guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.90))
 
     if guitars:  # list(guitars) not empty
         print("These are my guitars:")
@@ -32,8 +32,7 @@ def main():
             print("Guitar {0} : {1.name:>20} ({1.year}), worth ${1.cost:10.2f}{2}".format(i, guitar, vintage_string))
 
     else:
-        print("No guitar : (Let's go and buy one!)"
-              "")
+        print("No guitar : (Let's go and buy one!)")
 
 
 main()
