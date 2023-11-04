@@ -75,6 +75,19 @@ def main():
     # Sort the guitars
     guitars.sort()
 
+    # Run commands, only choice is Q will turn on user_quit.
+    user_quit = False
+    while not user_quit:
+        # Print the menu string
+        print("Menu:")
+        print("D - Display guitars")
+        print("A - Add new guitar")
+        print("Q - Quit")
+
+
+        # Input prompt
+        choice = input(">>> ").upper()
+
 
 
 
