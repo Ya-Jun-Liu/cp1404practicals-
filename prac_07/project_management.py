@@ -22,3 +22,43 @@ PRIORITY_RULE = {lambda y: y > 0: "Priority should be greater than 0."}
 COST_RULE = {lambda y: y > 0: "Cost estimate should be greater than 0."}
 COMP_RULE = {lambda y: 100 >= y >=
              0: "Completion Percentage should be in ragne [0,100]"}
+
+
+
+def str_to_date(date_string):
+    """Convert date string to a date."""
+    date = datetime.datetime.strptime(date_string, "%d/%m/%Y").date()
+    return date
+
+
+def date_to_str(date):
+    """Convert a date to a date string in the specified format."""
+    return date.strftime("%d/%m/%Y")
+
+
+
+
+def main():
+    """Display a project list that allows a user to add new project."""
+
+    # Load project from csv
+    projects = load_csv_file(FILENAME)
+
+    # Run commands, only choice is Q will turn on user_quit.
+    user_quit = False
+    while not user_quit:
+
+        # Print the menu string"
+        print("- (L)oad projects")
+        print("- (S)ave projects")
+        print("- (D)isplay projects")
+        print("- (F)ilter projects by date")
+        print("- (A)dd new project")
+        print("- (U)pdate project")
+        print("- (Q)uit")
+
+
+
+
+if __name__ == '__main__':
+    main()
