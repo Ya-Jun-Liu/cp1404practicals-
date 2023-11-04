@@ -74,6 +74,29 @@ def get_nonempty_string(input_msg):
     return get_name  # an input string
 
 
+def get_number(input_msg, type_cast=int):
+    """Get a valid integer <type> input and return to main."""
+    # input_msg (str): Show message when ask user to input.
+    # type_cast (class): The type you want to get
+
+    input_number = 0  # assign initial value incase try errors
+    index_is_ok = False
+    while not index_is_ok:
+        try:
+            # input should be an int
+            input_number = type_cast(input(input_msg))
+            # number should be greater than 0
+            if input_number <= 0:
+                print("Number must be > 0.")
+            else:
+                # If there's no rule violation, return true
+                index_is_ok = True
+        except ValueError:
+            print("Invalid input; enter a valid number.")
+
+    return input_number  # an integer
+
+
 def main():
     """Display a guitar list that allows a user to add new guitar."""
 
@@ -93,6 +116,30 @@ def main():
 
         # Input prompt
         choice = input(">>> ").upper()
+        if choice == 'Q':
+            # Quit - Save csv
+            save_csv_file(guitars, FILENAME)
+            # if quit, break the inf loop and exit the program.
+            user_quit = True
+        elif choice == 'D':
+            # Display
+            display_guitars(guitars)
+        elif choice == 'A':
+            # Add new guitar
+
+            print("Enter details for a guitar")
+
+            # Get songs info
+            name = get_nonempty_string("Name: ")
+            year = get_number("Year: ", int)
+            cost = get_number("Cost: ", float)
+
+            # Update list
+            guitars.append(Guitar(name, year, cost))
+            guitars.sort()
+
+        elif choice:
+            print("Invalid manu choice")
 
 
 if __name__ == '__main__':
