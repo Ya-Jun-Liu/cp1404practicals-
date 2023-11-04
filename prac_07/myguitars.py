@@ -45,3 +45,28 @@ def load_csv_file(filename):
             name, year, cost = row
             read_row.append(Guitar(name, int(year), float(cost)))
     return read_row
+
+
+def display_guitars(guitars):
+    """Display information of guitars."""
+    for guitar in guitars:
+        print(guitar)
+
+def main():
+    """Display a guitar list that allows a user to add new guitar."""
+
+    # Load Songs from csv
+    guitars = load_csv_file(FILENAME)
+    # Sort the guitars
+    guitars.sort()
+
+
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    main()
