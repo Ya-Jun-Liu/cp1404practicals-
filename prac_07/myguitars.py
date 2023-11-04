@@ -4,7 +4,6 @@ Estimate: 300 minutes
 Actual: 720 minutes
 """
 
-
 import csv
 
 CURRENT_YEAR = 2023
@@ -38,8 +37,6 @@ class Guitar:
         return self.year < other.year
 
 
-
-
 def load_csv_file(filename):
     """Load the guitar list from a csv file."""
     read_row = []
@@ -57,7 +54,6 @@ def display_guitars(guitars):
         print(guitar)
 
 
-
 def save_csv_file(guitars, filename):
     """Save guitar list to a csv file."""
     with open(filename, 'w', newline='') as csvfile:
@@ -66,6 +62,17 @@ def save_csv_file(guitars, filename):
         for guitar in guitars:
             writer.writerow([guitar.name, guitar.year, guitar.cost])
     print(f"Save guitars into {filename}.csv successfully.")
+
+
+def get_nonempty_string(input_msg):
+    """Get a valid string and return to main."""
+
+    get_name = input(input_msg)  # input_msg (str): Show message when ask user to input.
+    while get_name == '':
+        print("Input can not be blank.")
+        get_name = input(input_msg)
+    return get_name  # an input string
+
 
 def main():
     """Display a guitar list that allows a user to add new guitar."""
@@ -84,16 +91,8 @@ def main():
         print("A - Add new guitar")
         print("Q - Quit")
 
-
         # Input prompt
         choice = input(">>> ").upper()
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
