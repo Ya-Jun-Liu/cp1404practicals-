@@ -41,7 +41,7 @@ class Guitar:
 
 
 def load_csv_file(filename):
-    """Load csv file."""
+    """Load the guitar list from a csv file."""
     read_row = []
     with open(filename, newline='') as csvfile:
         for row in csv.reader(csvfile):
@@ -52,9 +52,20 @@ def load_csv_file(filename):
 
 
 def display_guitars(guitars):
-    """Display information of guitars."""
+    """Display guitar list."""
     for guitar in guitars:
         print(guitar)
+
+
+
+def save_csv_file(guitars, filename):
+    """Save guitar list to a csv file."""
+    with open(filename, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile, delimiter=',',
+                            quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        for guitar in guitars:
+            writer.writerow([guitar.name, guitar.year, guitar.cost])
+    print(f"Save guitars into {filename}.csv successfully.")
 
 def main():
     """Display a guitar list that allows a user to add new guitar."""
