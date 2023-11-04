@@ -25,3 +25,19 @@ class Project:
     def __lt__(self, other):
         """Compare priority."""
         return self.priority < other.priority
+
+    def get_priority(self):
+        """Get priority."""
+        return self.priority
+
+    def get_start_date(self):
+        """Get start date."""
+        return self.start_date
+
+    def is_complete(self):
+        """Set complete percentage."""
+        return self.complete_percentage == 100
+
+    def is_not_complete(self):
+        """Set complete"""
+        return not self.is_complete()
