@@ -1,4 +1,4 @@
-def date_to_str(date):
+def date_to_string(date):
     return date.strftime("%d/%m/%Y")
 
 
@@ -17,7 +17,7 @@ class Project:
     def __str__(self):
         """Return string format."""
         return f"{self.name}, " + \
-            f"start: {date_to_str(self.start_date)}, " + \
+            f"start: {date_to_string(self.start_date)}, " + \
             f"priority {self.priority}, " + \
             f"estimate: ${self.cost_estimate}, " + \
             f"completion {self.complete_percentage}%"
