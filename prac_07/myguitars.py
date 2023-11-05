@@ -74,7 +74,7 @@ def get_nonempty_string(input_msg):
     return get_name  # an input string
 
 
-def get_number(input_msg, type_cast=int):
+def get_number(input_msg, type_cast):
     """Get a valid integer <type> input and return to main."""
     # input_msg (str): Show message when ask user to input.
     # type_cast (class): The type you want to get
