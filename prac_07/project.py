@@ -39,5 +39,5 @@ class Project:
         return self.complete_percentage == 100
 
     def is_not_complete(self):
-        """Set complete"""
+        """Set complete."""
         return not self.is_complete()
