@@ -1,7 +1,7 @@
 """
 guitar
 Estimate: 2 minutes
-Actual: 2 minutes
+Actual: 5 minutes
 """
 CURRENT_YEAR = 2023
 VINTAGE = 50
