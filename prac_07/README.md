@@ -1,6 +1,6 @@
 # Author
 
-A second year electrical engineering student
+A second year engineering student
 
 ## Clean code in Python
 
