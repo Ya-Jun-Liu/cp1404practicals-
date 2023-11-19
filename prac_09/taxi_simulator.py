@@ -18,7 +18,7 @@ def main():
     choice = input(">>>").lower()
     while choice != "q":
         if choice == "c":
-            current_taxi = choose_taxi(taxis, bill)
+            current_taxi = choose_taxi(taxis, bill, current_taxi)
         elif choice == "d":
             if current_taxi != "":
                 bill += drive_distance(current_taxi)
@@ -41,21 +41,22 @@ def display_taxis():
     return taxis
 
 
-def choose_taxi(taxis, bill):
+def choose_taxi(taxis, bill, current_taxi):
     """Choose a taxi."""
     print("Taxis available: ")
     for i, taxi in enumerate(taxis):
         print(f"{i} - {taxi}")
 
-    current_taxi=None
+    current_taxi = None
     max_number = len(taxis)
     number_is_valid = False
     while not number_is_valid:
         try:
             taxi_number = int(input("Choose taxi:"))
+
             if 0 == taxi_number <= max_number:
                 number_is_valid = True
-                current_taxi = taxis[taxi_number - 1]
+                current_taxi = taxis[taxi_number]
             else:
                 print("Invalid taxi choice")
                 print(f"Bill to date: ${bill:.2f}")
