@@ -7,20 +7,17 @@ def main():
     while user_input != '':
         user_input = user_input.strip()
         try:
-            page_summary = wikipedia.summary(user_input)
             page = wikipedia.page(user_input)
-            print("\ntitle:")
-            print(user_input.title())
-            print("\nSummary:")
-            print(page_summary)
-            print("\nURL:")
-            print(page.url)
+            page_summary = wikipedia.summary(user_input)
+            print("\ntitle:", page.title)
+            print("Summary:", page_summary)
+            print("URL:", page.url)
         except wikipedia.exceptions.DisambiguationError:
             print("DisambiguationError. Try another query!")
         except wikipedia.exceptions.PageError:
             print("PageError. Try another query!")
 
-        user_input = input("Search:")
+        user_input = input("\nSearch: (blank to exit)")
     print("Thank you!")
 
 
